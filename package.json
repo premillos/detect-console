@@ -1,0 +1,32 @@
+{
+  "name": "fuck-console",
+  "version": "0.1.0",
+  "description": "prevent some bad guys from debugging code through the console 😜",
+  "main": "dist/fuck-console.cjs.js",
+  "browser": "dist/fuck-console.umd.js",
+  "module": "dist/fuck-console.esm.js",
+  "scripts": {
+    "build": "npm run clear && rollup -c ./rollup.config.js",
+    "clear": "rm -rf ./dist"
+  },
+  "keywords": [
+    "console",
+    "debugger",
+    "javascript",
+    "js",
+    "devtool"
+  ],
+  "author": "pssgo",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "rollup": "^2.32.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "typescript": "^4.0.5",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "tslib": "^2.0.3"
+  }
+}
