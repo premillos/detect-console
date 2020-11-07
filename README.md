@@ -4,8 +4,8 @@ prevent some bad guys from debugging code through the console 😜
 
 ![https://img.shields.io/github/stars/pssgo/detect-console?style=social](https://img.shields.io/github/stars/pssgo/detect-console?style=social)
 [![Build Status](https://www.travis-ci.org/pssgo/detect-console.svg?branch=master)](https://www.travis-ci.org/pssgo/detect-console)
-![NPM](https://img.shields.io/npm/l/detect-console?q=3)
-![npm](https://img.shields.io/npm/v/detect-console?q=5)
+![NPM](https://img.shields.io/npm/l/detect-console?q=10)
+![npm](https://img.shields.io/npm/v/detect-console?q=10)
 
 ## Install
 
