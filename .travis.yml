@@ -11,13 +11,20 @@ jobs:
         - echo "npm neploying start...."
         - npm run build
         - echo "npm deploying finished..."
+      before_deploy:
+        - rm -rf ./detect-console.ts ./rollup.config.js ./LICENSE
       deploy:
-        provider: npm
-        email: 411568765@qq.com
-        api_key: '$NPM_TOKEN'
-        skip_cleanup: true
-        on:
-          tags: true
-          branch: master
-        tag: latest
-        condition: '$TRAVIS_TAG =~ ^v[0-9]+.[0-9]+.[0-9]+$'
+        - provider: npm
+          email: '411568765@qq.com'
+          api_key: '$NPM_TOKEN'
+          skip_cleanup: true
+          on:
+            tags: true
+          tag: latest
+          condition: '$TRAVIS_TAG =~ ^v[0-9]+.[0-9]+.[0-9]+$'
+        - provider: release
+          api_key: '$GITHUB_TOKEN'
+          file: 'dist/detect-console.umd.js'
+          skip_cleanup: true
+          on:
+            tags: true

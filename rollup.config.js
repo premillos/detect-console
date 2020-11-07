@@ -1,29 +1,29 @@
-import typescript from "rollup-plugin-typescript2";
-import json from "@rollup/plugin-json";
-import commonjs from "@rollup/plugin-commonjs";
-import resolve from "@rollup/plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
+import typescript from 'rollup-plugin-typescript2'
+import json from '@rollup/plugin-json'
+import commonjs from '@rollup/plugin-commonjs'
+import resolve from '@rollup/plugin-node-resolve'
+import { terser } from 'rollup-plugin-terser'
 
-import pkg from "./package.json";
+import pkg from './package.json'
 
 const config = {
-  input: "fuck-console.ts",
+  input: 'detect-console.ts',
   output: [
     {
       file: pkg.module,
-      format: "es",
+      format: 'es',
     },
     {
       file: pkg.main,
-      format: "cjs",
+      format: 'cjs',
     },
     {
       file: pkg.browser,
-      name: "fuck-console",
-      format: "umd",
+      name: 'DetectConsole',
+      format: 'umd',
     },
   ],
   plugins: [typescript(), commonjs(), resolve(), terser(), json()],
-};
+}
 
-export default config;
+export default config

@@ -1,10 +1,10 @@
 {
-  "name": "fuck-console",
-  "version": "0.1.0",
+  "name": "detect-console",
+  "version": "0.3.0",
   "description": "prevent some bad guys from debugging code through the console 😜",
-  "main": "dist/fuck-console.cjs.js",
-  "browser": "dist/fuck-console.umd.js",
-  "module": "dist/fuck-console.esm.js",
+  "main": "dist/detect-console.cjs.js",
+  "browser": "dist/detect-console.umd.js",
+  "module": "dist/detect-console.esm.js",
   "scripts": {
     "build": "npm run clear && rollup -c ./rollup.config.js",
     "clear": "rm -rf ./dist"
@@ -16,6 +16,9 @@
     "js",
     "devtool"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "pssgo",
   "license": "MIT",
   "devDependencies": {

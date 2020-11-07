@@ -1,18 +1,18 @@
-# fuck-console
+# detect-console
 
 prevent some bad guys from debugging code through the console 😜
 
-![https://img.shields.io/github/stars/pssgo/fuck-console?style=social](https://img.shields.io/github/stars/pssgo/fuck-console?style=social)
-![NPM](https://img.shields.io/npm/l/fuck-console)
-![npm](https://img.shields.io/npm/dt/fuck-console)
-![npm](https://img.shields.io/npm/v/fuck-console)
+![https://img.shields.io/github/stars/pssgo/detect-console?style=social](https://img.shields.io/github/stars/pssgo/detect-console?style=social)
+[![Build Status](https://www.travis-ci.org/pssgo/detect-console.svg?branch=master)](https://www.travis-ci.org/pssgo/detect-console)
+![NPM](https://img.shields.io/npm/l/detect-console?q=3)
+![npm](https://img.shields.io/npm/v/detect-console?q=5)
 
 ## Install
 
 ```shell
-npm install fuck-console
+npm install detect-console
 or
-yarn add fuck-console
+yarn add detect-console
 
 ```
 
@@ -20,23 +20,23 @@ yarn add fuck-console
 
 ```js
 // es6
-import FuckConsole from "fuck-console";
+import DetectConsole from 'detect-console'
 
-FuckConsole({
+new DetectConsole({
   onOpen() {
-    console.log("console is opened");
+    console.log('console is opened')
   },
   onClose() {
-    console.log("console is closed!");
+    console.log('console is closed!')
   },
-});
+})
 ```
 
 ```js
 // by script
-<script src="fuck-console.umd.js"></script>
+<script src="detect-console.umd.js"></script>
 <script>
-  FuckConsole({
+  new DetectConsole({
     onOpen() {
       console.log('console is opened')
     },
@@ -55,4 +55,4 @@ FuckConsole({
 
 ## License
 
-[MIT](https://github.com/pssgo/fuck-console/blob/main/LICENSE)
+[MIT](https://github.com/pssgo/detect-console/blob/main/LICENSE)
